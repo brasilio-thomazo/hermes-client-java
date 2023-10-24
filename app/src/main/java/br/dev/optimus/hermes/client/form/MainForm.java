@@ -1,5 +1,6 @@
 package br.dev.optimus.hermes.client.form;
 
+import br.dev.optimus.hermes.client.ClientGrpc;
 import br.dev.optimus.hermes.client.form.component.IMenuBar;
 import br.dev.optimus.hermes.client.model.Document;
 import br.dev.optimus.hermes.client.model.DocumentFile;
@@ -72,7 +73,10 @@ public class MainForm extends VBox {
     }
 
     private void listDepartment() {
-
+        var client = new ClientGrpc("192.168.59.105", 31110);
+        client.createClient().departmentList().forEach(department -> {
+            logger.info(department.toString());
+        });
     }
 
     private String generateName() {
