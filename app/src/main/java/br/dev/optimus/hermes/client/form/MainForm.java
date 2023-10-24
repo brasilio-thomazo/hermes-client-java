@@ -73,6 +73,7 @@ public class MainForm extends VBox {
     }
 
     private void listDepartment() {
+        logger.info("Listando departamentos");
         var client = new ClientGrpc("192.168.59.105", 31110);
         client.createClient().departmentList().forEach(department -> {
             logger.info(department.toString());
