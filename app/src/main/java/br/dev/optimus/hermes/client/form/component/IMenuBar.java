@@ -12,8 +12,8 @@ public class IMenuBar extends MenuBar {
         itemGenerate.setId("menu-generate");
         itemGenerate.setOnAction(actionEventEventHandler);
         MenuItem itemTest = new MenuItem("Connection test");
-        itemGenerate.setId("menu-test");
-        itemGenerate.setOnAction(actionEventEventHandler);
+        itemTest.setId("menu-test");
+        itemTest.setOnAction(actionEventEventHandler);
         MenuItem itemClose = new MenuItem("Fechar");
         itemClose.setId("menu-close");
         itemClose.setOnAction(actionEventEventHandler);
