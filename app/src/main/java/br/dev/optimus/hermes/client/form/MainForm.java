@@ -19,7 +19,6 @@ import java.time.LocalDate;
 import java.util.*;
 import java.util.logging.Logger;
 
-
 public class MainForm extends VBox {
     private final Logger logger = Logger.getLogger(MainForm.class.getName());
     private final Stage stage;
@@ -60,6 +59,9 @@ public class MainForm extends VBox {
         if (item.getId().equals("menu-generate")) {
             generate();
         }
+        if (item.getId().equals("menu-test")) {
+            listDepartment();
+        }
     }
 
     private void buttonAction(ActionEvent event) {
@@ -67,6 +69,10 @@ public class MainForm extends VBox {
         if (item.getId().equals("btn-start")) {
             stage.close();
         }
+    }
+
+    private void listDepartment() {
+
     }
 
     private String generateName() {
